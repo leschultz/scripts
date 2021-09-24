@@ -10,6 +10,7 @@ if __name__ == '__main__':
     grab = 10
     swap = ['Y', 'Fe', 'Co', 'Zr']
     rem = ['O']
+    vo = 4
 
     structure = Structure.from_file('POSCAR')
     coords = structure.frac_coords
@@ -24,6 +25,9 @@ if __name__ == '__main__':
 
     # Get unique list of swaps
     swap_perm = set(permutations(swap['species'], swap.shape[0]))
+    rem_perm = [True]*(rem.shape[0]-vo)+[False]*(vo)
+    rem_perm = set(permutations(rem_perm, rem.shape[0]))
+    print(rem_perm)
 
     # Remove once every cite
     rem_perm = []
