@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     swap = ['Y', 'Fe', 'Co', 'Zr']
     rem = ['O']
-    rem_num = 4
+    rem_num = 3
     sample = 100
 
     structure = Structure.from_file('POSCAR')
