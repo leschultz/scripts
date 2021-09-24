@@ -1,0 +1,65 @@
+#LORBIT = 11
+#NEDOS = 2000
+#TIME = 0.05
+#LWAVE = False
+MAGMOM = 32*0 8*0 12*4 12*3 92*0
+
+### General setup
+NPAR = 4          # Determines the number of bands that are treated in parallel. ~sqrt(# of cores).
+ISTART = 1        # Whether or not to read the WAVECAR file.
+ICHARG = 0        # whether or not to read the CHARGCAR file
+
+#### type of exchange-correlation
+GGA = PE          # in accordance with the POTCAR file by default
+##IVDW = 11         # adddispersion DFT+D3
+
+#### spin
+ISPIN = 2         # 1 non spin polarized, 2 spin polarized
+##NUPDOWN = 1       # specify the value of spin_up minus spin_down
+NELECT = 1228
+
+#### Electronic structure part
+PREC = N # The precision mode.
+ALGO = V       # The electronic minimization algorithm.
+LREAL = Auto         # Whether the projection operators are evalulated in real-space or reciprocal space.
+ENCUT = 500       # energy cutoff of plane wave
+ISMEAR = 0        # How the partial occupancies are set for each orbital. -5 is recommend to cal the total energy in bulk mareials and dos calculation;
+SIGMA = 0.05       # The width of the smearing in eV.
+#
+EDIFF = 1E-4      # The global break condition for the electronic SC-loop.
+##MAXMIX = 15       # The maximum number of steps stored in Broyden mixer.
+#AMIX = 0.2
+#BMIX = 1.0
+##NELMIN = 4        # The minimum number of electronic SCF steps.
+#NELM = 500        # The maximum number of electronic SC steps wich may be performed.
+#
+ISYM = 0
+#### ionic relaxiation
+#IBRION = 2        # Determines how the ions are updated and moved.-1 no updata, 0 MD, 1 RMM-DIIS, 2 CG, 3 damped MD
+#NSW = 499
+#ISIF = 2
+#EDIFFG = -0.05
+#POTIM = 0.5       # 0.5 if IBRION=1,2,3
+
+##+U
+LDAU = True
+LDAUTYPE = 2
+LDAUJ = 0 0 0 0 0
+LDAUU = 0 0 5.3 3.32 0
+LDAUL = -1 -1 2 2 -1
+## MD
+IBRION = -1        # Determines how the ions are updated and moved.-1 no updata, 0 MD, 1 RMM-DIIS, 2 CG, 3 damped MD
+MDALGO = 1       # The molecular dynamics simulation protocol.
+#SMASS = 0
+ANDERSEN_PROB = 0.1
+ISIF = 2
+POTIM = 3.0       # Time step fs.
+#
+#### Output part
+#NWRITE = 0        # How much will be written to OUTCAR.
+#NBLOCK = 1        # Ionic steps the pair correlation function and DOS are calculated.
+#LCHARG = F        # Determines whether the carge densitites are written.
+#LWAVE = F         # Determines whether the wavefunctions are written.
+#LVHAR = F         # write LOCPOT or not
+LCHARG = .FALSE.               # no charge density written out
+LWAVE = .FALSE.                # no wave function coefficients written out

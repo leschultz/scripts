@@ -12,7 +12,7 @@ if __name__ == '__main__':
     swap = ['Y', 'Fe', 'Co', 'Zr']
     rem = ['O']
     rem_num = 4
-    sample = 5
+    sample = 100
 
     structure = Structure.from_file('POSCAR')
     coords = structure.frac_coords
@@ -48,6 +48,6 @@ if __name__ == '__main__':
                               pos[['x', 'y', 'z']].values
                               )
 
-        os.makedirs('{}'.format(count), exist_ok=True)
-        structure.to(filename='{}/POSCAR'.format(count))
+        os.makedirs('run_{}'.format(count), exist_ok=True)
+        structure.to(filename='run_{}/POSCAR'.format(count))
         count += 1
