@@ -20,7 +20,7 @@ LDAUJ = 0 0 0 0 0                 # Specifies the strength of the effective on-s
 LDAUU = 0 0 5.3 3.32 0            # Specifies the strength of the effective on-site Coulomb interactions.
 LDAUL = -1 -1 2 2 -1              # Specifies the l-quantum number for which the on-site interaction is added.
 
-## DFT
+## DFT or AIMD
 IBRION = -1                       # Determines how the ions are updated and moved.-1 no updata, 0 MD, 1 RMM-DIIS, 2 CG, 3 damped MD.
 MDALGO = 1                        # The molecular dynamics simulation protocol.
 ANDERSEN_PROB = 0.1               # Sets the collision probability for the Anderson thermostat

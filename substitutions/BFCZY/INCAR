@@ -1,6 +1,6 @@
 #### Spin
 ISPIN = 2                          # 1 non spin polarized, 2 spin polarized.
-NELECT = 291                       # The number of valence electrons.
+NELECT = 293                       # The number of valence electrons.
 MAGMOM = 8*0 1*0 1*0 3*4 3*3 20*0  # The magnetic moments.
 
 #### Electronic structure part
@@ -12,8 +12,6 @@ ISMEAR = 0                         # How the partial occupancies are set for eac
 SIGMA = 0.05                       # The width of the smearing in eV.
 EDIFF = 1E-4                       # The global break condition for the electronic SC-loop.
 ISYM = 0                           # How to deal with symmetry.
-AMIX = 0.2                         # Specifies the linear mixing parameter.
-BMIX = 1.0                         # Sets the cutoff wave vector for Kerker mixing scheme
 
 ##+U
 LDAU = .TRUE.                      # Switches the L(S)DA+U.
@@ -22,7 +20,7 @@ LDAUJ = 0 0 0 0 0 0                # Specifies the strength of the effective on-
 LDAUU = 0 0 0 5.3 3.32 0           # Specifies the strength of the effective on-site Coulomb interactions.
 LDAUL = -1 -1 -1 2 2 -1            # Specifies the l-quantum number for which the on-site interaction is added.
 
-## DFT
+## DFT or AIMD
 IBRION = -1                        # Determines how the ions are updated and moved.-1 no updata, 0 MD, 1 RMM-DIIS, 2 CG, 3 damped MD.
 MDALGO = 1                         # The molecular dynamics simulation protocol.
 ANDERSEN_PROB = 0.1                # Sets the collision probability for the Anderson thermostat
