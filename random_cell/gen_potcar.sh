@@ -11,6 +11,7 @@ fi
 
 # Generate POTCAR
 for i in $(grep -Eo '[[:alpha:]]+' <<<${1}); do
+	echo $i
         POT=$(grep ${i} ${REC} | grep yes)
         POT=$(echo ${POT} | awk -F "," '{print $2}')
         POT=$(find ${POTS} -type d -name ${POT} | grep pbe)
